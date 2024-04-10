@@ -1,0 +1,139 @@
+:root{
+    --body-color: #FEF8EB;
+    --nav-color: #F1E7CF;
+    --p-color: #000;
+    --heading-color: #000;
+    --highlight-color: #A31F17;
+}
+
+body{
+    background-color: var(--body-color);
+}
+
+.main-nav {
+    list-style: none;
+    text-align: right;
+    background-color: var(--nav-color);
+    font-family: Roboto, Inter, san-serif;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.main-nav li a{
+    text-decoration: none;
+    color: var(--p-color);
+    font-size: 16px;
+}
+
+
+h1{
+    font-family: ziclets, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    color: var(--highlight-color);
+}
+
+h2, h3, h4, p{
+    font-family: Roboto, Inter, san-serif;
+}
+
+h2{
+    font-size: 20px;
+}
+
+h3{
+    font-size: 18px;
+}
+
+h4{
+    font-size: 17px;
+}
+
+p{
+    font-size: 16px;
+    line-height: 1.6em;
+    margin-bottom: 20px;
+}
+
+.button{
+    background-color: var(--highlight-color);
+    color: var(--body-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.button:hover{
+    background-color: var(--nav-color);
+    color: var(--highlight-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+.visually-hidden:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    z-index: 10000; 
+    outline: none; 
+    background-color: #fff; 
+    color: #000; 
+    font-size: 1em; 
+    padding: 10px; 
+    border: 2px solid #000; 
+    top: 0; 
+    left: 0; 
+}
+
+li, ul{
+    font-family: Roboto, Inter, san-serif;
+    font-size: 16px;
+}
+
+footer {
+    background-color: var(--nav-color);
+    color: var(--p-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
