@@ -18,6 +18,20 @@ header {
 
 main {
     padding: 2rem;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: auto;
+}
+
+a{
+    text-decoration: none;
+    color: var(--p-color);
+}
+
+a:hover{
+    text-decoration: underline;
+    color: var(--highlight-color);
 }
 
 .introduction{
@@ -35,10 +49,50 @@ header .introduction p {
     font-weight: bold;
 }
 
+.NOAA, .affinity, .sweetli { 
+    position: relative;
+    width: 100%; 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8); /* White with 60% opacity */
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;             /* Start fully transparent */
+    transition: opacity 0.3s ease-in-out;
+    font-size: 40px;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 .project-card {
-    padding: 1rem;
+    width: 100%;            /* Makes the image responsive within its container */
+    object-fit: cover;      /* Ensures the image covers the area, cropping as needed */
+    border-radius: 10px;    /* Rounded corners */
+    display: block;         /* Block display to allow margin auto */
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);   /* Optional: adds shadow for depth */
+}
+
+.project-info {
+    text-align: center;     /* Centers the text inside this container */
+    width: 100%;            /* Ensure this takes the full width */
 }
 
 .intro-photo {
@@ -120,6 +174,8 @@ p{
     border-radius: 10px;
     margin: 0 auto;
     font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 .button:hover{
