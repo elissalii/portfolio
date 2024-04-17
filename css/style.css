@@ -10,6 +10,8 @@ body{
     background-color: var(--body-color);
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -34,7 +36,7 @@ a:hover{
     color: var(--highlight-color);
 }
 
-.introduction{
+.introduction, .starters{
     background-color: var(--highlight-color);
     width: auto;
     max-width: 100%;
@@ -45,8 +47,13 @@ header .introduction {
     padding-left: 10px
   }
 
-header .introduction p {
+header .introduction p, header .starters p {
     font-weight: bold;
+}
+
+header .starters{
+    text-align: center;
+    padding: 10px;
 }
 
 .NOAA, .affinity, .sweetli { 
@@ -81,12 +88,12 @@ header .introduction p {
 }
 
 .project-card {
-    width: 100%;            /* Makes the image responsive within its container */
+    width: 500px;  
+    height: 250px;          /* Makes the image responsive within its container */
     object-fit: cover;      /* Ensures the image covers the area, cropping as needed */
     border-radius: 10px;    /* Rounded corners */
     display: block;         /* Block display to allow margin auto */
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);   /* Optional: adds shadow for depth */
 }
 
@@ -124,11 +131,21 @@ header .introduction p {
     margin-right: 20px;
 }
 
+.main-nav .current-page a {
+    color: var(--highlight-color);
+    font-weight: bold;
+}
+
 .main-nav li a{
     text-decoration: none;
     color: var(--p-color);
     font-size: 16px;
     font-family: Roboto, Inter, Arial;
+}
+
+.main-nav li a:hover{
+    text-decoration: underline;
+    color: var(--highlight-color);
 }
 
 
@@ -162,7 +179,7 @@ h4{
 p{
     font-size: 16px;
     line-height: 1.6em;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 
 .button{
@@ -188,12 +205,6 @@ p{
     text-decoration: none;
     display: inline-block;
     margin: 0 10px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 .row {
@@ -245,6 +256,49 @@ img {
 li, ul{
     font-family: Roboto, Inter, san-serif;
     font-size: 16px;
+    
+}
+
+.about {
+    display: flex;
+    align-items: flex-start; /* Aligns the image and text vertically */
+    flex-wrap: wrap;
+}
+
+.about img {
+    height: 400px;
+    width: 230px;
+    object-fit: cover;
+    margin-right: 5px; /* Adds some space between the image and the text */
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.about p {
+    margin: 0; /* Removes default margin from headings and paragraphs */
+}
+
+.passions {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content */
+}
+
+.passions ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates a 2-column grid */
+    list-style-type: disc; /* Adds bullets to the list */
+    padding: 0; /* Resets default padding */
+    max-width: 600px; /* Or any width that fits your design */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.passions li {
+    margin: 10px; /* Adds some space around each list item */
 }
 
 footer {
@@ -253,6 +307,3 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
-
-
-

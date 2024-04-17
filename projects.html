@@ -6,53 +6,87 @@
     <link rel="stylesheet" href="css/html5reset.css">
 	<!-- Link to the stylesheet -->
 	<link rel="stylesheet" href="css/style.css">
-    <title>Pets</title>
+    <link rel="stylesheet" href="https://use.typekit.net/mbd5uvl.css">
+    <title>Elissa's Portfolio</title>
 </head>
 <body>
     <a href = "#main-content" class="visually-hidden">Skip to Main Content</a>
     <header>
         <nav>
             <ul class="main-nav">
-                <li class="current-page"><a href = "index.html">home</a></li>
-                <li><a href = "project.html">projects</a></li>
+                <li><a href = "index.html">home</a></li>
+                <li class="current-page"><a href = "projects.html">projects</a></li>
                 <li><a href = "about.html">about</a></li>
                 <li><a href = "extra.html">extra</a></li>
             </ul>
         </nav>
-        <h1>projects</h1>
+        <div class="starters">
+            <h3>some of my</h3>
+            <h1>projects</h1>
+        </div>
 
     </header>
     
     <main id = "main-content">
-        <div>
-            <h2>species list generator mobile design</h2>
-            <h3>NOAA (GLANSIS)</h3>
-            <h4>duration: 4 months</h4>
-            <p>I redesigned the GLANSIS website to be more suitable for mobile and desktop application. I incorporated consistent design standards across the Species List Generator pages such as font size, type, photo sizes, and margins.</p>
+        <div class="project-container">
+            <div class="NOAA">
+                <img class="project-card" src="images/NOAA-cover-page.png" alt="NOAA Glansis Redesign">
+                <div class="overlay">
+                    <a href="glansis.html"><strong>Click to view project</strong></a>
+                </div>
+            </div>
+            <div class="project-info">
+                <h2>species list generator mobile design</h2>
+                <h3>NOAA (GLANSIS)</h3>
+                <h4>duration: 4 months</h4>
+                <p>I redesigned the GLANSIS website to be more suitable for mobile and desktop application. I incorporated consistent design standards across the Species List Generator pages such as font size, type, photo sizes, and margins.</p>
+            </div>
         </div>
 
-        <div>
-            <h2>ux research on food insecurity</h2>
-            <h3>case study</h3>
-            <h4>duration: 4 months</h4>
-            <p>I researched food insecurity within Ann Arbor and how we can utilize restaurant waste to fuel local food banks. In order to complete this, I conducted interviews, usability tests, and curated affinity diagrams, task analysis diagrams, and journey maps.</p>
+        <div class = "project-container">
+            <div class="affinity">
+                <img class="project-card" src="images/Affinity-Diagram.png" alt="An image of an affinity diagram with sticky notes scattered around organized by color">
+                <div class="overlay">
+                    <a href="food.html"><strong>Click to view project</strong></a>
+                </div>
+            </div>
+            <div class = "project-info">
+                <h2>ux research on food insecurity</h2>
+                <h3>case study</h3>
+                <h4>duration: 4 months</h4>
+                <p>I researched food insecurity within Ann Arbor and how we can utilize restaurant waste to fuel local food banks. In order to complete this, I conducted interviews, usability tests, and curated affinity diagrams, task analysis diagrams, and journey maps.</p>
+            </div>
         </div>
 
-        <div>
-            <h2>home page redesign</h2>
-            <h3>sweetli</h3>
-            <h4>duration: pending</h4>
-            <p>I redesigned the sweetli home page for a desktop interface. To do so, I integrated aspects from the previous version of the site while enhancing usability by including icons for the menu bar, and more easily digestable boxes of text.</p>
-        </div>
-
-        <div>
-            <p>Thank you so much for looking at my portfolio! If you have any questions, comments, or concerns, please feel free to reach out:</p>
-            <ul>
-                <li>mail: elissali@umich.edu</li>
-                <li>linkedin: https://www.linkedin.com/in/elissa-li-8b5318187/</li>
-            </ul>
+        <div class = "project-container">
+            <div class = "sweetli">
+                <img class = "project-card" src = "images/Sweetli Home Page Cover.png" alt="An image of the Sweetli Home Page that includes a bubble letter logo of the brand name and a wavy image of rose pipped cupcakes">
+                <div class="overlay">
+                    <a href="sweetli.html"><strong>Click to view project</strong></a>
+                </div>
+            </div>
+            <div class = "project-info">
+                <h2>home page redesign</h2>
+                <h3>sweetli</h3>
+                <h4>duration: pending</h4>
+                <p>I redesigned the sweetli home page for a desktop interface. To do so, I integrated aspects from the previous version of the site while enhancing usability by including icons for the menu bar, and more easily digestable boxes of text.</p>    
+            </div>
         </div>
     </main>
+    <footer>
+        <p>hi!<br>thank you so much for visiting my portfolio!<br>if you're interested in seeing more or chatting -- lets keep in touch!</p>
+        <div class="contact-info">
+            <a href="https://www.instagram.com/s.weet.li/">
+                <img src="images/Instagram Icon.png" alt="LinkedIn" title="Visit Sweetli Instagram">
+            </a>
+            <a href="mailto:elissali@umich.edu">
+                <img src="images/Mail Icon.png" alt="Email" title="Send an Email">
+            </a>
+            <a href="https://www.linkedin.com/in/elissa-li-8b5318187/">
+                <img src="images/LinkdIn Icon.png" alt="LinkedIn" title="Visit LinkedIn Profile">
+            </a>
+        </div>
+    </footer>
     <script src="js/actions.js"></script>
 </body>
 </html>
