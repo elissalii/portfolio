@@ -317,6 +317,7 @@ li, ul{
 .peak h2{
     text-align: center;
     margin: 10px;
+    color: var(--body-color);
 }
 
 .peak-images {
