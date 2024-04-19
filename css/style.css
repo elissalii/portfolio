@@ -29,6 +29,7 @@ main {
 a{
     text-decoration: none;
     color: var(--p-color);
+    font: Arial, Helvetica, sans-serif;
 }
 
 a:hover{
@@ -140,7 +141,7 @@ header .starters{
     text-decoration: none;
     color: var(--p-color);
     font-size: 16px;
-    font-family: Roboto, Inter, Arial;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .main-nav li a:hover{
@@ -149,21 +150,24 @@ header .starters{
 }
 
 
-h1{
+h1, h2{
     font-family: ziclets, sans-serif;
     font-style: normal;
+}
+
+h1{
     font-weight: 500;
     font-size: 40px;
     color: var(--body-color);
 }
 
-h2, h3, h4, p{
-    font-family: Roboto, Inter, Arial;
+h3, h4, p{
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h2{
     font-size: 20px;
-    color: var(--body-color);
+    color: var(--highlight-color);
 }
 
 h3{
@@ -254,27 +258,27 @@ img {
 }
 
 li, ul{
-    font-family: Roboto, Inter, san-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    
 }
 
 .about {
     display: flex;
     align-items: flex-start; /* Aligns the image and text vertically */
-    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .about img {
     height: 400px;
     width: 230px;
     object-fit: cover;
-    margin-right: 5px; /* Adds some space between the image and the text */
+    margin-right: 20px; /* Adds some space between the image and the text */
+    border-radius: 10px;
 }
 
 .about-text {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    max-width: calc(100%-255px);
 }
 
 .about p {
@@ -285,20 +289,76 @@ li, ul{
     display: flex;
     flex-direction: column;
     align-items: center; /* Centers the content */
+    justify-content: center;
+    background-color: var(--highlight-color);
+    border-radius: 10px;
+    padding: 1em;
+    color: var(--body-color);
+    margin: 20px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .passions ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Creates a 2-column grid */
-    list-style-type: disc; /* Adds bullets to the list */
-    padding: 0; /* Resets default padding */
-    max-width: 600px; /* Or any width that fits your design */
-    width: 100%;
+    list-style-type: disc;
+    padding: 1em; /* Resets default padding */
+    width: calc(100%-2em);
     box-sizing: border-box;
+    column-gap: 3em;
 }
 
 .passions li {
-    margin: 10px; /* Adds some space around each list item */
+    margin: 10px 0; /* Adds some space around each list item */
+    position: relative;
+}
+
+.peak h2{
+    text-align: center;
+    margin: 10px;
+}
+
+.peak-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 1em;
+    max-width: 100%;
+    margin: auto;
+}
+
+.peak-images img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.baking, .crochet, .makeup {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid */
+    gap: 10px; /* Adjust the gap between items as needed */
+    margin-bottom: 2em; /* Space after each section */
+}
+
+.baking h2, .crochet h2, .makeup h2 {
+    grid-column: 1 / -1; /* Centers the title over the grid */
+    text-align: center;
+}
+
+.baking p, .crochet p, .makeup p {
+    grid-column: 1 / -1; /* Ensures the paragraph spans all columns */
+    text-align: center; /* Center the text of the paragraph */
+    margin-bottom: 1em; /* Space before the images start */
+}
+
+.baking img, .crochet img, .makeup img {
+    width: 100%; /* Full width of the column */
+    aspect-ratio: 1 / 1; /* Makes the images square */
+    object-fit: cover; /* Ensures the image covers the square */
+    border-radius: 10px;
 }
 
 footer {
