@@ -299,6 +299,10 @@ li, ul{
     width: 100%;
 }
 
+.passions h2{
+    color: var(--body-color);
+}
+
 .passions ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Creates a 2-column grid */
@@ -317,7 +321,6 @@ li, ul{
 .peak h2{
     text-align: center;
     margin: 10px;
-    color: var(--body-color);
 }
 
 .peak-images {
