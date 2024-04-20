@@ -16,3 +16,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const button = document.querySelector('.button'); // Select the button
+
+    button.addEventListener('mouseenter', function() {
+        this.classList.add('pulsate'); // Add pulsate class on hover
+    });
+
+    button.addEventListener('mouseleave', function() {
+        this.classList.remove('pulsate'); // Remove pulsate class when not hovering
+    });
+});

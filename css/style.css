@@ -6,6 +6,8 @@
     --highlight-color: #A31F17;
 }
 
+/* base styles */
+
 body{
     background-color: var(--body-color);
     font-family: Arial, Helvetica, sans-serif;
@@ -13,142 +15,6 @@ body{
     margin: 0;
     padding: 0;
 }
-
-header {
-    color: var(--body-color);
-}
-
-main {
-    padding: 2rem;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    width: auto;
-}
-
-a{
-    text-decoration: none;
-    color: var(--p-color);
-    font: Arial, Helvetica, sans-serif;
-}
-
-a:hover{
-    text-decoration: underline;
-    color: var(--highlight-color);
-}
-
-.introduction, .starters{
-    background-color: var(--highlight-color);
-    width: auto;
-    max-width: 100%;
-}
-
-header .introduction {
-    text-align: left;
-    padding-left: 10px
-  }
-
-header .introduction p, header .starters p {
-    font-weight: bold;
-}
-
-header .starters{
-    text-align: center;
-    padding: 10px;
-}
-
-.NOAA, .affinity, .sweetli { 
-    position: relative;
-    width: 100%; 
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.8); /* White with 60% opacity */
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;             /* Start fully transparent */
-    transition: opacity 0.3s ease-in-out;
-    font-size: 40px;
-}
-
-.project-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.project-card {
-    width: 500px;  
-    height: 250px;          /* Makes the image responsive within its container */
-    object-fit: cover;      /* Ensures the image covers the area, cropping as needed */
-    border-radius: 10px;    /* Rounded corners */
-    display: block;         /* Block display to allow margin auto */
-    margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);   /* Optional: adds shadow for depth */
-}
-
-.project-info {
-    text-align: center;     /* Centers the text inside this container */
-    width: 100%;            /* Ensure this takes the full width */
-}
-
-.intro-photo {
-    width: 200px;
-    margin-left: 50%;
-}
-
-.social-links {
-    padding-top: 20px;
-}
-
-.social-links img {
-    width: 32px;
-    margin: 0 10px;
-}
-
-.main-nav {
-    list-style: none;
-    text-align: right;
-    background-color: var(--nav-color);
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 15px 0px 15px 15px
-}
-
-.main-nav li {
-    display: inline;
-    margin-right: 20px;
-}
-
-.main-nav .current-page a {
-    color: var(--highlight-color);
-    font-weight: bold;
-}
-
-.main-nav li a{
-    text-decoration: none;
-    color: var(--p-color);
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.main-nav li a:hover{
-    text-decoration: underline;
-    color: var(--highlight-color);
-}
-
 
 h1, h2{
     font-family: ziclets, sans-serif;
@@ -168,6 +34,7 @@ h3, h4, p{
 h2{
     font-size: 20px;
     color: var(--highlight-color);
+    padding-top: 15px;
 }
 
 h3{
@@ -186,45 +53,26 @@ p{
     margin-bottom: 35px;
 }
 
-.button{
-    background-color: var(--nav-color);
-    color: var(--highlight-color);
-    padding: 10px 15px;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 10px;
-    margin: 0 auto;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.button:hover{
-    background-color: var(--nav-color);
-    color: var(--highlight-color);
-}
-
-.contact-info a{
-    color: var(--p-color);
-    text-decoration: none;
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.column {
-    flex: 1;
-    padding: 10px;
-}
-
 img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+a{
+    text-decoration: none;
+    color: var(--p-color);
+    font: Arial, Helvetica, sans-serif;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: var(--highlight-color);
+}
+
+li, ul{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
 
 .visually-hidden {
@@ -257,9 +105,117 @@ img {
     left: 0; 
 }
 
-li, ul{
-    font-family: Arial, Helvetica, sans-serif;
+/* header styles */
+
+header {
+    color: var(--body-color);
+}
+
+header nav {
+    position: sticky;
+    top: 0; /* Set the top edge of the nav bar to stay at the top of the viewport */
+    z-index: 1000; /* Ensures the nav bar stays on top of other content */
+    background-color: var(--nav-color); /* Optional: ensures the nav bar isn't semi-transparent */
+    width: 100%; /* Ensures the nav bar extends full width */
+}
+
+.main-nav {
+    list-style: none;
+    text-align: right;
+    background-color: var(--nav-color);
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 0px 15px 15px
+}
+
+.main-nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.main-nav li a{
+    text-decoration: none;
+    color: var(--p-color);
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-nav li a:hover{
+    text-decoration: underline;
+    color: var(--highlight-color);
+}
+
+.main-nav .current-page a {
+    color: var(--highlight-color);
+    font-weight: bold;
+}
+
+/* main content styles */
+
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: auto;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project-card {
+    width: 500px;  
+    height: 250px;          /* Makes the image responsive within its container */
+    object-fit: cover;      /* Ensures the image covers the area, cropping as needed */
+    border-radius: 10px;    /* Rounded corners */
+    display: block;         /* Block display to allow margin auto */
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);   /* Optional: adds shadow for depth */
+}
+
+.project-info {
+    text-align: center;     /* Centers the text inside this container */
+    width: 100%;            /* Ensure this takes the full width */
+}
+
+/* special sections and elements */
+
+.introduction, .starters{
+    background-color: var(--highlight-color);
+    width: auto;
+    max-width: 100%;
+}
+
+header .introduction {
+    text-align: left;
+    padding-left: 10px
+  }
+
+header .introduction p, header .starters p {
+    font-weight: bold;
+}
+
+header .starters{
+    text-align: center;
+    padding: 10px;
+}
+
+.NOAA, .affinity, .sweetli { 
+    position: relative;
+    width: 100%; 
+}
+
+.intro-photo {
+    width: 200px;
+    margin-left: 50%;
 }
 
 .about {
@@ -365,9 +321,133 @@ li, ul{
     border-radius: 10px;
 }
 
+.social-links {
+    padding-top: 20px;
+}
+
+.social-links img {
+    width: 32px;
+    margin: 0 10px;
+}
+
+/* button styles */
+
+.button{
+    background-color: var(--nav-color);
+    color: var(--highlight-color);
+    padding: 10px 15px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    margin: 0 auto;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.button:hover{
+    background-color: var(--nav-color);
+    color: var(--highlight-color);
+}
+
+/* overlay styles */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8); /* White with 60% opacity */
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;             /* Start fully transparent */
+    transition: opacity 0.3s ease-in-out;
+    font-size: 40px;
+}
+
+/* animations */
+
+@keyframes pulsate {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.pulsate {
+    animation: pulsate 2.5s infinite;
+}
+
+/* footer styles */
+
 footer {
     background-color: var(--nav-color);
     color: var(--p-color);
     text-align: center;
     padding: 20px 0;
+}
+
+.contact-info a{
+    color: var(--p-color);
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+
+@media (min-width: 768px) {
+    .project-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        align-items: start;
+        gap: 40px; /* Space between columns */
+        margin: 10px;
+    }
+
+    .project-card {
+        width: 100%; /* Ensures width is consistent */
+        height: 230px; /* Fixed height to ensure all images are the same size */
+        object-fit: cover; /* Ensures images cover the area without distorting aspect ratio */
+    }
+
+    .project-info {
+        width: 100%; /* Ensures the text area matches the image width */
+    }
+
+    /* Additional styling for text alignment and appearance within the project-info */
+    .project-info h2, .project-info h3, .project-info h4, .project-info p {
+        text-align: left; /* Align text to the left */
+        margin: 0;  /* Remove any default margins to maintain grid alignment */
+        padding: 0.25em; /* Optional padding for better text readability */
+    }
+
+    .about img {
+        height: 500px;
+        width: 430px;
+        object-fit: cover;
+        margin-right: 20px; /* Adds some space between the image and the text */
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .project-container {
+        gap: 60px; /* Increased space between project cards */
+        margin: 20px; /* Additional outer spacing if needed */
+    }
+
+    .project-card {
+        height: 300px; /* Maintain aspect ratio or set a fixed height */
+    }
+
+    .about img{
+        height: 550px;
+        width: 500px;
+    }
+
 }
