@@ -115,7 +115,7 @@ header nav {
     position: sticky;
     top: 0; /* Set the top edge of the nav bar to stay at the top of the viewport */
     z-index: 1000; /* Ensures the nav bar stays on top of other content */
-    background-color: var(--nav-color); /* Optional: ensures the nav bar isn't semi-transparent */
+    background-color: var(--nav-color);
     width: 100%; /* Ensures the nav bar extends full width */
 }
 
@@ -178,7 +178,7 @@ main {
     border-radius: 10px;    /* Rounded corners */
     display: block;         /* Block display to allow margin auto */
     margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);   /* Optional: adds shadow for depth */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .project-info {
@@ -361,7 +361,7 @@ header .starters{
 
 .general-project-info h3, 
 .general-project-info p {
-    margin: 0; /* Removes margin for all direct children, if needed */
+    margin: 0;
     padding: 10px 0; /* Adds vertical padding for spacing */
 }
 
