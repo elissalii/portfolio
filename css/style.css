@@ -205,7 +205,11 @@ header .introduction p, header .starters p {
 
 header .starters{
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+}
+
+.starters h1, .starters h3 {
+    margin: 10px;
 }
 
 .NOAA, .affinity, .sweetli { 
@@ -330,6 +334,106 @@ header .starters{
     margin: 0 10px;
 }
 
+.overview, .problem, .design_process, .final_design, .final_design_conclusions h2 {
+    text-align: center;
+}
+
+
+.final_design_conclusions h4, .final_design_conclusions p{
+    text-align: left;
+}
+
+.general-project-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+    gap: 20px; /* Space between columns and rows */
+    justify-content: center; /* Centers grid items horizontally */
+    margin: 0px auto; /* Centers the grid in the main content and adds vertical space */
+    max-width: 80%; /* Limits the width to avoid overly wide columns on larger screens */
+    padding: 20px; /* Padding inside the grid for better spacing around content */
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column; /* Stacks h3 above p */
+    align-items: start; /* Aligns items to the left */
+}
+
+.general-project-info h3, 
+.general-project-info p {
+    margin: 0; /* Removes margin for all direct children, if needed */
+    padding: 10px 0; /* Adds vertical padding for spacing */
+}
+
+.before-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust the gap between images as needed */
+    margin-bottom: 30px;
+}
+  
+.before-image-container .image-left, .before-image-container .image-right {
+    max-width: 50%; /* Adjust the width as needed to control the size of the images */
+    height: auto; /* Keep the aspect ratio */
+    object-fit: cover; /* This will cover the area of the image container without stretching */
+}
+
+.design_process .analysis .before-image-container {
+    display: flex; /* Sets flexbox layout */
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Centers children horizontally */
+    gap: 20px; /* Adds space between items */
+}
+
+.design_process .analysis .before-image-container img {
+    max-width: 100%; /* Sets maximum width for images */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.images-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates a two-column layout */
+    grid-template-rows: auto auto; /* Two rows, height determined by content */
+    gap: 20px; /* Adjust the gap between items as needed */
+    justify-content: center; /* Center grid items horizontally */
+    align-items: center; /* Center grid items vertically */
+    padding: 20px; /* Optional padding */
+}
+
+.images-grid img {
+    width: 100%; /* Full width of the column */
+    height: auto; /* Keep the aspect ratio */
+    object-fit: cover; /* This will cover the area of the image container without stretching */
+}
+
+.final_design img {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15px;
+    width: 90%;
+    height: auto;
+}
+
+iframe {
+    width: 90%;
+}
+
+#NOAA_cover_desktop_design, #Sweetli_cover_desktop_design {
+    width: 60%; /* Smaller width as per your requirement */
+    height: auto; /* Maintains the aspect ratio */
+    margin-bottom: 20px; /* Space below the image */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#original_sweetli_desktop {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
 /* button styles */
 
 .button{
@@ -432,6 +536,17 @@ footer {
         object-fit: cover;
         margin-right: 20px; /* Adds some space between the image and the text */
         border-radius: 10px;
+    }
+    .design_process .analysis .before-image-container {
+        display: flex; /* Enables flexbox layout */
+        flex-direction: row; /* Places children side by side */
+        justify-content: center; /* Centers children horizontally */
+        gap: 20px; /* Adds space between items */
+    }
+
+    .design_process .analysis .before-image-container img{
+        width: 50%;
+        height: auto;
     }
 }
 
